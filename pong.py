@@ -13,12 +13,13 @@ def run_game():
     
     while True:
         pygame.time.delay(30)
-
+        
+        # get inputs/events
         gf.check_events()
-
+        # update ball and paddle
         ball.update(settings)
-
-        gf.update_screen(settings, window, ball)
+        # draw/update the screen
+        gf.update_window(settings, window, ball)
 
 run_game()
         

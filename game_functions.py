@@ -8,7 +8,7 @@ def check_events():
             pygame.quit()
             sys.exit()
 
-def update_screen(settings, window, ball):
+def update_window(settings, window, ball):
     window.fill(settings.bg_color)
     pygame.draw.circle(window, ball.color, (ball.xpos, ball.ypos), ball.rad, 0)
 
