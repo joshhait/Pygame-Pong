@@ -22,11 +22,11 @@ while run:
 
     if(ball.xpos <= 0):
         ball.reverseXVel()
-    if(ball.xpos >= 512):
+    if(ball.xpos >= SCREEN_WIDTH):
         ball.reverseXVel()
     if(ball.ypos <= 0):
         ball.reverseYVel()
-    if(ball.ypos >= 256):
+    if(ball.ypos >= SCREEN_HEIGHT):
         ball.reverseYVel()
         
     ball.updatePosition()
