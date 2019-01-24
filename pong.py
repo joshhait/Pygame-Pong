@@ -14,7 +14,8 @@ class Ball:
         self.ypos = ypos
         self.rad = rad
         self.xvel = xvel
-        self.yvel = yvel
+        self.yvel = yvel 
+
 
 ball = Ball(256, 128, 5, 10, 10)
 run = True
@@ -34,6 +35,7 @@ while run:
         ball.yvel = -ball.yvel
     if(ball.ypos >= 256):
         ball.yvel = -ball.yvel
+        
     ball.xpos += ball.xvel
     ball.ypos += ball.yvel
 
