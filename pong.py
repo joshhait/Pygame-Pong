@@ -1,40 +1,25 @@
 import pygame
 from ball import Ball
 from settings import Settings
-pygame.init()
+import game_functions as gf
 
-settings = Settings()
+def run_game():
+    pygame.init()
+    settings = Settings()
+    window = pygame.display.set_mode((settings.screen_width, settings.screen_height))
+    pygame.display.set_caption(settings.title)
 
-win = pygame.display.set_mode((settings.screen_width, settings.screen_height))
+    ball = Ball(256, 128, 5, 10, 10)
+    
+    while True:
+        pygame.time.delay(30)
 
-pygame.display.set_caption(settings.title)
+        gf.check_events()
 
+        ball.update(settings)
 
-ball = Ball(256, 128, 5, 10, 10)
-run = True
+        gf.update_screen(settings, window, ball)
 
-while run:
-    pygame.time.delay(30)
-
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            run = False
-
-    if(ball.xpos <= 0):
-        ball.reverseXVel()
-    if(ball.xpos >= settings.screen_width):
-        ball.reverseXVel()
-    if(ball.ypos <= 0):
-        ball.reverseYVel()
-    if(ball.ypos >= settings.screen_height):
-        ball.reverseYVel()
+run_game()
         
-    ball.updatePosition()
-
-
-    win.fill((55,55,55))
-    pygame.draw.circle(win, (200, 200, 200), (ball.xpos, ball.ypos), ball.rad, 0)
-    pygame.display.update()
-
-pygame.quit()
 
