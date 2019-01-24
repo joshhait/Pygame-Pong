@@ -1,13 +1,15 @@
 import pygame
 from ball import Ball
+
 pygame.init()
 
 SCREEN_WIDTH = 512
 SCREEN_HEIGHT = 256
+title = "Pong"
 
 win = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
 
-pygame.display.set_caption("Pong")
+pygame.display.set_caption(title)
 
 
 ball = Ball(256, 128, 5, 10, 10)
