@@ -1,10 +1,10 @@
 class Ball:
-    def __init__(self, xpos, ypos, rad, xvel, yvel):
+    def __init__(self, xpos, ypos):
         self.xpos = xpos
         self.ypos = ypos
-        self.rad = rad
-        self.xvel = xvel
-        self.yvel = yvel
+        self.rad = 5
+        self.xvel = 16
+        self.yvel = 16
         self.color = (200, 200, 200)
 
     def update(self, settings):

@@ -9,7 +9,7 @@ def run_game():
     window = pygame.display.set_mode((settings.screen_width, settings.screen_height))
     pygame.display.set_caption(settings.title)
 
-    ball = Ball(256, 128, 5, 10, 10)
+    ball = Ball(256, 128)
     
     while True:
         pygame.time.delay(30)
