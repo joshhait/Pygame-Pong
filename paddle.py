@@ -9,3 +9,17 @@ class Paddle:
         self.color = (200, 200, 200)
 
         self.rect = pygame.Rect(self.xpos, self.ypos, self.width, self.height)
+
+        self.movingUp = False
+        self.movingDown = False
+
+    def update(self):
+        if self.movingUp:
+            self.ypos -= 16
+            self.rect = pygame.Rect(self.xpos, self.ypos, self.width, self.height)
+        if self.movingDown:
+            self.ypos += 16
+            self.rect = pygame.Rect(self.xpos, self.ypos, self.width, self.height)
+
+        
+
