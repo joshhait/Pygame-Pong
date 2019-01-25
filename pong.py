@@ -1,5 +1,6 @@
 import pygame
 from ball import Ball
+from paddle import Paddle
 from settings import Settings
 import game_functions as gf
 
