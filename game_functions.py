@@ -37,7 +37,7 @@ def check_events(pad1, pad2):
 
 def update_window(settings, window, ball, pad1, pad2):
     window.fill(settings.bg_color)
-    pygame.draw.circle(window, ball.color, (ball.xpos, ball.ypos), ball.rad, 0)
+    pygame.draw.rect(window, ball.color, ball.rect, 0)
     pygame.draw.rect(window, pad1.color, pad1.rect, 0)
     pygame.draw.rect(window, pad2.color, pad2.rect, 0)
     pygame.display.update()

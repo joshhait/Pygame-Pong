@@ -16,12 +16,12 @@ def run_game():
     pad2 = Paddle(974, 206)
     
     while True:
-        pygame.time.delay(30)
+        pygame.time.delay(20)
         
         # get inputs/events
         gf.check_events(pad1, pad2)
         # update ball and paddle
-        ball.update(settings)
+        ball.update(settings, pad1, pad2)
         pad1.update()
         pad2.update()
         # draw/update the screen
