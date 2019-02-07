@@ -14,11 +14,11 @@ class Paddle:
         self.movingDown = False
 
     def update(self):
-        if self.movingUp:
-            self.ypos -= 16
+        if self.movingUp and (self.ypos - 8) >= 0:
+            self.ypos -= 8
             self.rect = pygame.Rect(self.xpos, self.ypos, self.width, self.height)
         if self.movingDown:
-            self.ypos += 16
+            self.ypos += 8
             self.rect = pygame.Rect(self.xpos, self.ypos, self.width, self.height)
 
         
